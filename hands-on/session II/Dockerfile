@@ -8,7 +8,6 @@ COPY idx_data/ /app/idx_data/
 COPY openvisuspy/ /app/openvisuspy/
 COPY GEOtiled/geotiled /app/geotiled/
 COPY Tutorial.ipynb /app/
-COPY Explore_Data.ipynb /app/
 COPY *.py /app/
 COPY environment.yml /app/
 
@@ -18,16 +17,6 @@ RUN apt-get update \
     && apt-get install -y wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# Install miniconda
-# ENV CONDA_DIR /opt/conda
-# RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
-#     /bin/bash ~/miniconda.sh -b -p /opt/conda
-
-# Put conda in path so we can use conda activate
-#ENV PATH=$CONDA_DIR/bin:$PATH
-
-#RUN conda update -n base conda && conda install -n base conda-libmamba-solver && conda config --set solver libmamba
 
 WORKDIR /app
 
