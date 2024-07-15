@@ -1,5 +1,5 @@
 {
-  "name": "NSDF Tutorial",
+  "name": "NSDF Tutorial - Session III",
   "image": "globalcomputinglab/nsdf_tutorial:sessionIII",
   "containerEnv": {
     "PROJ_LIB": "/opt/conda/envs/NSDF-Tutorial/share/proj"
