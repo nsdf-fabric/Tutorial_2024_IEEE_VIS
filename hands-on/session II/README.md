@@ -43,15 +43,20 @@ The slides introducing this tutorial can be downloaded [here](https://zenodo.org
 
 ### Table of content
 
-1. [Prerequisites](#prerequisites)
-2. [Running the Tutorial with GitHub Codespaces](#running-the-tutorial-with-github-codespaces)
-3. [Running the Tutorial with Docker](#running-the-tutorial-with-docker)
-4. [APPENDIX: Installing the Tutorial from the Beginning ](#appendix-installing-the-tutorial-from-the-beginning)
-5. [Community and Resources](#community-and-resources)
-6. [Related Publications](#related-publications)
-7. [Copyright and License](#copyright-and-license)
-8. [Authors](#authors)
-9. [Acknowledgments](#acknowledgments)
+- [**NSDF Tutorial: Using NSDF for End-to-End Analysis of Scientific Data**](#nsdf-tutorial-using-nsdf-for-end-to-end-analysis-of-scientific-data)
+  - [Overview](#overview)
+    - [Table of content](#table-of-content)
+  - [Prerequisites](#prerequisites)
+  - [Running the Tutorial with GitHub Codespaces](#running-the-tutorial-with-github-codespaces)
+  - [Running the Tutorial with Docker](#running-the-tutorial-with-docker)
+  - [APPENDIX: Installing the Tutorial from the Beginning](#appendix-installing-the-tutorial-from-the-beginning)
+    - [Using a Docker container](#using-a-docker-container)
+    - [Using your local machine](#using-your-local-machine)
+  - [Community and Resources](#community-and-resources)
+  - [Related Publications](#related-publications)
+  - [Copyright and License](#copyright-and-license)
+  - [Authors](#authors)
+  - [Acknowledgments](#acknowledgments)
 
 ## Prerequisites
 
@@ -112,11 +117,11 @@ Use your GitHub account to run this tutorial with GitHub Codespaces
 
 Please click the next button to open in GitHub Codespaces
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nsdf-fabric/NSDF_Tutorial)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/nsdf-fabric/Tutorial_2024_IEEE_VIS?devcontainer_path=.devcontainer/session+II/devcontainer.json)
 
 Now follow these steps to set up your virtual environment using GitHub codespaces:
 
-Verify that you are using the `main` branch, the repository name `nsdf-fabric/NSDF_Tutorial` and the dev container configuration `NSDF Tutorial`. Then click on `Create Codespace`
+Verify that you are using the `main` branch, the repository name `nsdf-fabric/Tutorial_2024_IEEE_VIS` and the dev container configuration `NSDF Tutorial - Session II`. Then click on `Create Codespace`
 
 <p align="center">
     <img src="files/docs/codespaces.png" width="800">
