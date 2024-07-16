@@ -41,22 +41,18 @@ The slides introducing this tutorial can be downloaded [here](https://zenodo.org
 
 ---
 
-### Table of content
+## Table of content
 
-- [**NSDF Tutorial: Using NSDF for End-to-End Analysis of Scientific Data**](#nsdf-tutorial-using-nsdf-for-end-to-end-analysis-of-scientific-data)
-  - [Overview](#overview)
-    - [Table of content](#table-of-content)
-  - [Prerequisites](#prerequisites)
-  - [Running the Tutorial with GitHub Codespaces](#running-the-tutorial-with-github-codespaces)
-  - [Running the Tutorial with Docker](#running-the-tutorial-with-docker)
-  - [APPENDIX: Installing the Tutorial from the Beginning](#appendix-installing-the-tutorial-from-the-beginning)
-    - [Using a Docker container](#using-a-docker-container)
-    - [Using your local machine](#using-your-local-machine)
-  - [Community and Resources](#community-and-resources)
-  - [Related Publications](#related-publications)
-  - [Copyright and License](#copyright-and-license)
-  - [Authors](#authors)
-  - [Acknowledgments](#acknowledgments)
+1. [Prerequisites](#prerequisites)
+2. [Running the Tutorial with GitHub Codespaces](#running-the-tutorial-with-github-codespaces)
+3. [Running the Tutorial with Docker](#running-the-tutorial-with-docker)
+4. [APPENDIX: Installing the Tutorial from the Beginning ](#appendix-installing-the-tutorial-from-the-beginning)
+5. [Community and Resources](#community-and-resources)
+6. [Related Publications](#related-publications)
+7. [Copyright and License](#copyright-and-license)
+8. [Authors](#authors)
+9. [Acknowledgments](#acknowledgments)
+
 
 ## Prerequisites
 
