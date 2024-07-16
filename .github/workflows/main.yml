@@ -26,6 +26,14 @@ jobs:
           file: ./hands-on/session II/Dockerfile
           tags: ${{ secrets.DOCKERHUB_ORG }}/nsdf_tutorial:sessionII
 
+      - name: Build and push register app session III
+        uses: docker/build-push-action@v3
+        with:
+          context: hands-on/session III
+          push: true
+          file: ./hands-on/session III/Dockerfile
+          tags: ${{ secrets.DOCKERHUB_ORG }}/nsdf_tutorial:sessionIII
+
     env:
       DOCKER_CLI_EXPERIMENTAL: enabled
       DOCKER_BUILDKIT: 1
