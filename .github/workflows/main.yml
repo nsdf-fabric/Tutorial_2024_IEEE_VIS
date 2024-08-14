@@ -21,9 +21,9 @@ jobs:
       - name: Build and push register app session II
         uses: docker/build-push-action@v3
         with:
-          context: hands-on/session II
+          context: hands-on/session II/Materials
           push: true
-          file: ./hands-on/session II/Dockerfile
+          file: ./hands-on/session II/Materials/Dockerfile
           tags: ${{ secrets.DOCKERHUB_ORG }}/nsdf_tutorial:sessionII
 
       - name: Build and push register app session III
