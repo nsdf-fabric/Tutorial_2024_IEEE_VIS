@@ -7,7 +7,8 @@ COPY files/ /app/files/
 COPY idx_data/ /app/idx_data/
 COPY openvisuspy/ /app/openvisuspy/
 COPY GEOtiled/geotiled /app/geotiled/
-COPY Tutorial.ipynb /app/
+COPY 1.Tutorial.ipynb /app/
+COPY 2.Explore_Data /app/
 COPY *.py /app/
 COPY environment.yml /app/
 
