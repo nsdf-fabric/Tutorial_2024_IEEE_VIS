@@ -3,14 +3,14 @@ FROM --platform=linux/amd64 continuumio/miniconda3:23.10.0-1
 RUN mkdir app
 WORKDIR /app
 
-COPY files/ /app/files/
-COPY idx_data/ /app/idx_data/
-COPY openvisuspy/ /app/openvisuspy/
-COPY GEOtiled/geotiled /app/geotiled/
-COPY ../1.Tutorial.ipynb /app/
-COPY ../2.Explore_Data /app/
-COPY *.py /app/
-COPY environment.yml /app/
+COPY Materials/files/ /app/files/
+COPY Materials/idx_data/ /app/idx_data/
+COPY Materials/openvisuspy/ /app/openvisuspy/
+COPY Materials/GEOtiled/geotiled /app/geotiled/
+COPY ./1.Tutorial.ipynb /app/
+COPY ./2.Explore_Data /app/
+COPY Materials/*.py /app/
+COPY Materials/environment.yml /app/
 
 # Install base utilities
 RUN apt-get update \
