@@ -8,7 +8,7 @@ COPY Materials/idx_data/ /app/idx_data/
 COPY Materials/openvisuspy/ /app/openvisuspy/
 COPY Materials/GEOtiled/geotiled /app/geotiled/
 COPY ./1.Tutorial.ipynb /app/
-COPY ./2.Explore_Data /app/
+COPY ./2.Explore_Data.ipynb /app/
 COPY Materials/*.py /app/
 COPY Materials/environment.yml /app/
 
