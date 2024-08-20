@@ -248,7 +248,13 @@ conda env create -f environment.yml
 Activate the virtual environment:
 
 ```
-conda activate somospie
+conda activate NSDF-Tutorial
+```
+
+Install GEOtiled library:
+```
+cd GEOtiled/geotiled
+pip install -e .
 ```
 
 Install OpenVisus dependencies:
