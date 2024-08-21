@@ -1,7 +1,7 @@
 # **NSDF Tutorial: Using NSDF for End-to-End Analysis of Scientific Data**
 
 <p align="center">
-    <img src="files/docs/Logos.png" width="450">
+    <img src="Materials/files/docs/Logos.png" width="450">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@ Throughout the tutorial, you will learn how to:
 The slides introducing this tutorial can be downloaded [here](https://zenodo.org/records/10794642). This tutorial follows the steps in Figure 1.
 
 <p align="center">
-    <img src="files/docs/arq.png" width="800">
+    <img src="Materials/files/docs/arq.png" width="800">
     <br>
     <em>Figure 1. Workflow diagram illustrating the tutorial's process of data collection, transformation, analysis, and storage using the SOMOSPIE engine and NSDF services.</em>
 </p>
