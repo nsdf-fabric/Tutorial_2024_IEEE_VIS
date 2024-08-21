@@ -153,10 +153,10 @@ Now open the terminal and follow the next steps to deploy the tutorial in the Do
 
 ```
 # Clone the tutorial repository:
-git clone https://github.com/nsdf-fabric/NSDF_Tutorial.git
+git clone https://github.com/nsdf-fabric/Tutorial_2024_IEEE_VIS.git
 
 # Navigate to the tutorial directory:
-cd NSDF_Tutorial
+cd Tutorial_2024_IEEE_VIS/session II/Materials/
 
 # Launch the Docker environment:
 docker-compose up -d
