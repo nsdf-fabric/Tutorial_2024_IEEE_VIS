@@ -120,7 +120,7 @@ Now follow these steps to set up your virtual environment using GitHub codespace
 Verify that you are using the `main` branch, the repository name `nsdf-fabric/Tutorial_2024_IEEE_VIS` and the dev container configuration `NSDF Tutorial - Session II`. Then click on `Create Codespace`
 
 <p align="center">
-    <img src="files/docs/codespaces.png" width="800">
+    <img src="Materials/files/docs/codespaces.png" width="800">
     <br>
     <em>Figure 2. Creating GitHub codespaces.</em>
 </p>
@@ -128,7 +128,7 @@ Verify that you are using the `main` branch, the repository name `nsdf-fabric/Tu
 > :bulb: **Note:** This process may take a couple of minutes.
 
 <p align="center">
-    <img src="files/docs/Creating_container.png" width="800">
+    <img src="Materials/files/docs/Creating_container.png" width="800">
     <br>
     <em>Figure 3. Setting up your Codespace.</em>
 </p>
@@ -136,7 +136,7 @@ Verify that you are using the `main` branch, the repository name `nsdf-fabric/Tu
 After creating the codespace, execute the tutorial notebook (Tutorial.ipynb)
 
 <p align="center">
-    <img src="files/docs/vscode.png" width="800">
+    <img src="Materials/files/docs/vscode.png" width="800">
     <br>
     <em>Figure 4. VS Code in GitHub Codespaces.</em>
 </p>
@@ -182,6 +182,7 @@ This session provides detailed instructions for setting up and running the workf
 To build the docker image in your local machine:
 
 ```
+cd Materials
 docker build --platform linux/amd64 -t globalcomputinglab/somospie_openvisus .
 ```
 
@@ -197,7 +198,7 @@ To run:
 docker run -d -p 5000:5000 -p 8989:8989 --name tutorial --platform linux/amd64 globalcomputinglab/somospie_openvisus
 ```
 
-Follow this URL to run the Jupyter Notebook `Tutorial.ipynb`:
+Follow this URL to run the Jupyter Notebook `1.Tutorial.ipynb`:
 
 ```
 http://localhost:5000/
@@ -242,6 +243,7 @@ To install the dependencies in your local machine, use the following command:
 > :bulb: **Note:** Conda is mandatory in this step, use [this](https://www.anaconda.com/download/) link to install it
 
 ```
+cd Materials
 conda env create -f environment.yml
 ```
 
@@ -311,7 +313,7 @@ SOMOSPIE Resources:
 Copyright (c) 2024, Global Computing Lab
 
 Catalog Comparison Tool is distributed under terms of the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) with LLVM Exceptions.
-See [LICENSE](LICENSE) for more details.
+See [LICENSE](Materials/LICENSE) for more details.
 
 ## Authors
 
