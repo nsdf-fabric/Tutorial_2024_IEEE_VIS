@@ -136,7 +136,7 @@ def build_mosaic(input_files, output_file, description="Elevation"):
     - The function utilizes the GDAL library's capabilities to achieve the desired mosaic effect.
     """
     # input_files: list of .tif files to merge
-    vrt = gdal.BuildVRT("merged.vrt", input_files)
+    vrt = gdal.BuildVRT("Materials/merged.vrt", input_files)
     translate_options = gdal.TranslateOptions(
         creationOptions=[
             "COMPRESS=LZW",
@@ -184,10 +184,10 @@ def build_mosaic_filtered(input_files, output_file):
       ensuring a smooth transition between tiles.
     - Overlapping regions in the mosaic are handled by averaging pixel values.
     """
-    vrt = gdal.BuildVRT("merged.vrt", input_files)
+    vrt = gdal.BuildVRT("Materials/merged.vrt", input_files) ## TODO:
     vrt = None  # closes file
 
-    with open("merged.vrt", "r") as f:
+    with open("Materials/merged.vrt", "r") as f:
         contents = f.read()
 
     if "<NoDataValue>" in contents:
@@ -216,7 +216,7 @@ def average(in_ar, out_ar, xoff, yoff, xsize, ysize, raster_xsize,raster_ysize, 
     sub1, sub2 = contents.split('band="1">', 1)
     contents = sub1 + code + sub2
 
-    with open("merged.vrt", "w") as f:
+    with open("Materials/merged.vrt", "w") as f:
         f.write(contents)
 
     cmd = [
@@ -230,7 +230,7 @@ def average(in_ar, out_ar, xoff, yoff, xsize, ysize, raster_xsize,raster_ysize, 
         "--config",
         "GDAL_VRT_ENABLE_PYTHON",
         "YES",
-        "merged.vrt",
+        "Materials/merged.vrt",
         output_file,
     ]
     bash(cmd)
@@ -365,27 +365,27 @@ def compute_geotiled(input_file):
     """
 
     out_folder = os.path.dirname(os.path.dirname(input_file))
-    # out_file = os.path.join(out_folder,'slope_tiles', os.path.basename(input_file))
-    # # Slope
-    # dem_options = gdal.DEMProcessingOptions(format='GTiff', creationOptions=['COMPRESS=LZW', 'TILED=YES', 'BIGTIFF=YES'])
-    # gdal.DEMProcessing(out_file, input_file, processing='slope', options=dem_options)
+    out_file = os.path.join(out_folder,'slope_tiles', os.path.basename(input_file))
+    # Slope
+    dem_options = gdal.DEMProcessingOptions(format='GTiff', creationOptions=['COMPRESS=LZW', 'TILED=YES', 'BIGTIFF=YES'])
+    gdal.DEMProcessing(out_file, input_file, processing='slope', options=dem_options)
 
-    # #Adding 'Slope' name to band description
-    # dataset = gdal.Open(out_file)
-    # band = dataset.GetRasterBand(1)
-    # band.SetDescription("Slope")
-    # dataset = None
+    #Adding 'Slope' name to band description
+    dataset = gdal.Open(out_file)
+    band = dataset.GetRasterBand(1)
+    band.SetDescription("Slope")
+    dataset = None
 
-    # # Aspect
-    # out_file = os.path.join(out_folder,'aspect_tiles', os.path.basename(input_file))
-    # dem_options = gdal.DEMProcessingOptions(zeroForFlat=False, format='GTiff', creationOptions=['COMPRESS=LZW', 'TILED=YES', 'BIGTIFF=YES'])
-    # gdal.DEMProcessing(out_file, input_file, processing='aspect', options=dem_options)
+    # Aspect
+    out_file = os.path.join(out_folder,'aspect_tiles', os.path.basename(input_file))
+    dem_options = gdal.DEMProcessingOptions(zeroForFlat=False, format='GTiff', creationOptions=['COMPRESS=LZW', 'TILED=YES', 'BIGTIFF=YES'])
+    gdal.DEMProcessing(out_file, input_file, processing='aspect', options=dem_options)
 
-    # #Adding 'Aspect' name to band description
-    # dataset = gdal.Open(out_file)
-    # band = dataset.GetRasterBand(1)
-    # band.SetDescription("Aspect")
-    # dataset = None
+    #Adding 'Aspect' name to band description
+    dataset = gdal.Open(out_file)
+    band = dataset.GetRasterBand(1)
+    band.SetDescription("Aspect")
+    dataset = None
 
     # Hillshading
     out_file = os.path.join(
